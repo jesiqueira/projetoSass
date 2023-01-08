@@ -1,3 +1,5 @@
+@import "functions";
+
 @mixin box{
     min-width: 1170px;
     margin: 0 auto;
@@ -10,4 +12,32 @@
 @mixin flex-center{
     display: flex;
     justify-content: space-evenly;
+}
+
+$imgs:("Carne Grelhada": "beef.jpg",
+"Bacon com Ovos": "breakfast.jpg",
+"Penne a Bolonhesa": "noodles.jpg",
+"Sopa de Batata0":"potato-soup.jpg",
+"Sopa de Arroz": "rice-noodles.jpg",
+"Sala Mix": "salad-g.jpg",
+"Costela Ribs": "spare-ribs.jpg",
+"Sushi": "sushi.jpg",
+"Taco": "taco.jpg",
+);
+
+$n:0;
+@each $titulo, $url in $imgs{
+    $n:$n+1;
+    #card#{$n}{
+        background-image: url(/images/produtos/#{$url});
+        background-size: cover;
+
+        & h2::before{
+            content: '#{$titulo}';
+            display: block;
+            background-color: rgba(0,0,0, 0.4);
+            color: #fff;
+            padding: 1rem 0.5rem;
+        }
+    }
 }

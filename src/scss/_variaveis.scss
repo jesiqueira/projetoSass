@@ -1,7 +1,8 @@
 //Variáveis SASS
 
 $fonte:'Ropa Sans';
-$bgHOme: '/images/backgrounds/background_home_2.jpg';
+$bgHome_1: '/images/backgrounds/background_home.jpg';
+$bgHome_2: '/images/backgrounds/background_home_2.jpg';
 $bgColorNav: rgba(0,0,0,0.4);
 $link:#f1f806;
 $linkHover:#fff;
@@ -9,3 +10,10 @@ $m1:1rem;
 $mx1:0 1.2rem;
 $p1: 1rem;
 $px1: 0 1.5rem;
+
+* {
+    font-family: $fonte;
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box
+  }
